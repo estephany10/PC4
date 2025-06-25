@@ -68,7 +68,7 @@ if pagina_seleccionada == 'Inicio':
     # Las columnas creadas se asignan a las variables col1 y col2.
 
     # En la primera columna colocamos la imagen de perfil
-    col1.image("ellie.png", caption='Aquí puedes escribir una etiqueta debajo de la imagen', width=300)
+    col1.image("foto_perfil.jpeg", caption='Esta soy yo :)', width=300)
 
     # col1.image("ellie.png", caption='Ellie', width=300): Esta línea está colocando una imagen en la primera columna (col1). 
     # La función image toma como primer argumento el nombre del archivo de la imagen que se desea mostrar. 
@@ -137,7 +137,7 @@ elif  pagina_seleccionada == 'Experiencia':
     # En este caso, {texto_2} se reemplaza por el valor de la variable texto.
 
     # Agregamos un subtítulo para el video
-    st.markdown("<h2 style='text-align: center;'>Aquí escribe un nombre creativo para presentar tu video</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>Aprende conmigo sobre los operadores booleanos</h2>", unsafe_allow_html=True)
     
     # <h2 style='text-align: center;'>Aquí escribe un nombre creativo para presentar tu video</h2>: Esta es una cadena de código HTML.
     # La etiqueta <h2> se utiliza para un encabezado de segundo nivel en una página web.
@@ -150,7 +150,7 @@ elif  pagina_seleccionada == 'Experiencia':
     # Por ejemplo, puedes agregar un emoji de video 🎥 
 
     # Agregamos un video realizado en las practicas anteriores
-    st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E")
+    # st.video("https://drive.google.com/file/d/1UwFb4H3hXoWLtVR-5DJnXngaOPhOKBIK/view?usp=sharing")
 
     # st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E"): Esta línea está mostrando un video en la aplicación web.
     # La función video toma como primer argumento la URL del video que se desea mostrar.
@@ -158,7 +158,12 @@ elif  pagina_seleccionada == 'Experiencia':
     # Puedes cambiar la URL por la de tu video en YouTube o en otra plataforma de video.
 
     # O creamos un botón para ir al enlace del video con button
-    st.markdown(f"<div style='text-align: center;'><a href='https://drive.google.com/file/d/1REvRXSu3GuGD73w8j44135MkRiezd0gP/view?usp=drive_link' target='_blank'><button>Ver video</button></a></div>", unsafe_allow_html=True) 
+    st.markdown(f"<div style='text-align: center;'><a href='https://drive.google.com/file/d/1UwFb4H3hXoWLtVR-5DJnXngaOPhOKBIK/view?usp=sharing' target='_blank'><button>Ver video</button></a></div>", unsafe_allow_html=True) 
+
+    # Agregar otro video
+    st.markdown("<h2 style='text-align: center;'>Aprende a diferenciar el bucle for y while</h2>", unsafe_allow_html=True)
+
+    st.markdown(f"<div style='text-align: center;'><a href='https://drive.google.com/file/d/1FKiZsj63xXwZYRf-SFaSWREZ_pNfI8P3/view?usp=sharing' target='_blank'><button>Ver video</button></a></div>", unsafe_allow_html=True) 
 
     # <div style='text-align: center;'><a href='https://drive.google.com/file/d/1REvRXSu3GuGD73w8j44135MkRiezd0gP/view?usp=drive_link' target='_blank'><button>Ver video</button></a></div>:
     # Esta es una cadena de código HTML.
@@ -178,10 +183,10 @@ elif  pagina_seleccionada == 'Experiencia':
 else:
 
     # Agregamos un título para la página de gráficos
-    st.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creativo para presentar tus gráficos</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Gráficos realizados en el ciclo 2025-1</h1>", unsafe_allow_html=True)
 
     # Creamos una lista de gráficos
-    graficos = ['Gráfico de barras verticales de lenguas aisladas', 'Gráfico de barras horizontales de familias lingüísticas', 'mapa_cusco']
+    graficos = ['Gráfico pastel del tipo de contenido en Netflix', 'Gráfico de barras verticales de redes sociales de los ministerios del Perú', 'Mapa de mis películas favoritas']
 
     # Creamos un cuadro de selección en la página de gráficos
     grafico_seleccionado = st.selectbox('Selecciona un gráfico', graficos)
@@ -195,19 +200,19 @@ else:
     
 
     # Mostramos el gráfico seleccionado
-    if grafico_seleccionado == 'Gráfico de barras verticales de lenguas aisladas':
+    if grafico_seleccionado == 'Gráfico pastel del tipo de contenido en Netflix':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-        st.image("aisladas_base_datos.png", caption='Gráfico de lenguas aisladas', width=500)
+        st.image("pastel_netflix.png", caption='Gráfico de tipo de contenido en Netflix', width=500)
         pass
-    elif grafico_seleccionado == 'Gráfico de barras horizontales de familias lingüísticas':
+    elif grafico_seleccionado == 'Gráfico de barras verticales de redes sociales de los ministerios del Perú':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-        st.image("lengua_familia_GB.png", caption='Gráfico de familias lingüísticas', width=500)
+        st.image("ministerios_redes_seaborn.png", caption='Gráfico de redes sociales', width=500)
         pass
-    elif grafico_seleccionado == 'mapa_cusco':
+    elif grafico_seleccionado == 'Mapa de mis películas favoritas':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu mapa</div>", unsafe_allow_html=True)
         # Si "mapa_cusco.html" es un archivo HTML (no una imagen), debes mostrarlo con st.components.v1.html
         import streamlit.components.v1 as components
-        with open("mapa_cusco.html", "r", encoding="utf-8") as f:
+        with open("mapa_peliculas.html", "r", encoding="utf-8") as f:
             html_content = f.read()
         components.html(html_content, height=500)
         pass
